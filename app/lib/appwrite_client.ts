@@ -1,8 +1,8 @@
 import { Client } from "appwrite";
+import { env } from "process";
 
 const client = new Client()
-    .setEndpoint('https://cloud.appwrite.io/v1')
-    .setProject('67dd8c180024723ee730');
+    .setProject(process.env.NEXT_PROJECT_APPWRITE_PROJECT_ID as string);
 
 
 export default client;
